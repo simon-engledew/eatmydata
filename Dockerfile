@@ -10,4 +10,6 @@ FROM mysql:8.0.34
 
 COPY --from=eatmydata /usr/local/bin/eatmydata /usr/local/bin/eatmydata
 
+LABEL org.opencontainers.image.source=https://github.com/simon-engledew/eatmysqldata
+
 ENTRYPOINT ["/usr/local/bin/eatmydata", "docker-entrypoint.sh"]
